@@ -1,27 +1,18 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import BasicTable from './BasicTable';
-import StickyHeadTable from './BigTable';
+import CustomPaginationActionsTable from './BigTable';
+import zIndex from '@mui/material/styles/zIndex';
+import StickyHeadTable from './StickyTable';
+import StickyHeadTable2 from './StickyTable(2)';
 
 export default function BoxSx() {
     return (
         <>
-            {/* <Box
-                sx={{
-                    width: 700,
-                    height: 700,
-                    backgroundColor: 'primary.dark',
-                    '&:hover': {
-                        backgroundColor: 'primary.main',
-                        opacity: [0.9, 0.8, 0.7],
-                    }}
-                }
-            >
-                
-                <BasicTable />
-            </Box> */}
-            <StickyHeadTable />
-
+            <div className='flexbox-container'>
+                <div><StickyHeadTable /> </div>
+                {/* <div><StickyHeadTable2 /></div> */}
+            </div>
         </>
     );
 }
